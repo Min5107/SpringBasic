@@ -2,12 +2,14 @@ package hello.core.member.impl;
 
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @Component
+@Primary
 public class MemoryMemberRepository implements MemberRepository {
 
     private static final Map<Long, Member> store = new HashMap<>();
